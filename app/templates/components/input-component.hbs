@@ -1,0 +1,8 @@
+<p style='color: blue'>Input Text on Component: {{inputText}}</p>
+<p style='color: blue'>User Input on Component: {{userInput}}</p>
+<input type='text'
+	size={{size}}
+	value={{value}}
+	onchange={{action textChanged}}
+	onkeypress={{action 'keyPressed'}} 
+	oninput={{action (mut userInput) value='data'}} />

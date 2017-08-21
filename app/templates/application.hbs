@@ -1,3 +1,21 @@
 {{#each model as |item|}} 
 	<p>{{item.content}}</p>
 {{/each}}
+
+<h1>Clousre Action</h1>
+
+<h2>Simple</h2>
+<p>Input Text on Controller: {{inputText}}</p>
+<p>User Input on Controller: {{userInput}}</p>
+
+<input type='text'
+	size='30'
+	onchange={{action 'textChangedOnController'}}
+	oninput={{action (mut userInput) value='data'}} />
+
+<h2>Nested Component</h2>
+{{input-component 
+	size=30
+	value=inputText
+	textChanged=(action 'textChangedOnController' 'curriedParam')
+}}
