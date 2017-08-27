@@ -7,6 +7,9 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('posts', { path: '/posts'});
+  this.route('notes', { path: '/notes'});
+  this.route('closure-action', { path: '/closure-action'});
 });
 
 export default Router;
